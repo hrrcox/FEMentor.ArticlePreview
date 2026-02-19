@@ -23,10 +23,9 @@
 </head>
 
 <body>
-   <article id="card">
-    <img class="hero"
-      src="/images/drawers.jpg"
-      alt="A dark green console with drawers. Sitting on top is a terracotta vase containing dried pampus grass, and two white picture frames containing watercolour art.">
+  <article id="card">
+    <img class="hero" src="/images/drawers.jpg"
+      alt="">
     <div class="article-content">
       <h2>Shift the overall look and feel by adding these wonderful
         touches to furniture in your home</h2>
@@ -37,8 +36,9 @@
     </div>
     <div class="supplement">
       <div class="user-profile">
-        <img class="avatar" src="/images/avatar-michelle.jpg" alt="Michelle Appleton">
+        <img class="avatar" src="/images/avatar-michelle.jpg" alt="">
         <div>
+          <p class="sr-only">Written by:</p>
           <p class="user-name">Michelle Appleton</p>
           <p class="date">28 Jun 2020</p>
         </div>
@@ -49,9 +49,17 @@
     </div>
     <div class="share-expand" id="share-options">
       <h3>Share on:</h3>
-      <button>Facebook</button>
-      <button>Twitter</button>
-      <button>Pinterest</button>
+      <div role="list" class="btn-list">
+        <div role="listitem">
+          <button>Facebook</button>
+        </div>
+        <div role="listitem">
+          <button>Twitter</button>
+        </div>
+        <div role="listitem">
+          <button>Pinterest</button>
+        </div>
+      </div>
     </div>
   </article>
   <div class="attribution">
