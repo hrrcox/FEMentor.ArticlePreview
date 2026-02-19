@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
   <title>Frontend Mentor | Article preview component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -43,10 +44,10 @@
         </div>
       </div>
       <div class="sharing">
-        <button class="share" id="share-btn" aria-label="Share">SHARE</button>
+        <button class="share" id="share-btn" aria-expanded="false" aria-controls="share-options">Share</button>
       </div>
     </div>
-    <div class="share-expand">
+    <div class="share-expand" id="share-options">
       <h3>Share on:</h3>
       <button>Facebook</button>
       <button>Twitter</button>
@@ -55,7 +56,7 @@
   </article>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/hrrcox">han</a>.
   </div>
 </body>
 

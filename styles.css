@@ -39,14 +39,14 @@
     .article-content h2 {
       font-size: 1.05rem;
       font-weight: 700;
-      color: #2d3f5e;
+      color: #006a38;
       line-height: 1.5;
       margin-bottom: 14px;
     }
 
     .article-content .description {
       font-size: 0.8rem;
-      color: #9daec2;
+      color: #383838;
       line-height: 1.7;
     }
 
@@ -78,7 +78,7 @@
 
     .date {
       font-size: 0.75rem;
-      color: #9daec2;
+      color: #575757;
       margin-top: 2px;
     }
 
@@ -89,19 +89,18 @@
     }
 
     .share {
-      background: #ecf0f6;
+      background: #95be99;
       border: none;
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
+      border-radius: 40px;
+      width: 4rem;
+      height: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      color: #6e8098;
-      font-size: 0.6rem;
+      color: #000000;
+      font-size: 1rem;
       font-weight: 700;
-      letter-spacing: 0.05em;
       transition: background 0.2s, color 0.2s;
     }
 
@@ -110,7 +109,7 @@
     }
 
     article.is-sharing .share {
-      background: #6e8098;
+      background: #b9cde8;
       color: #ffffff;
     }
 
@@ -118,12 +117,17 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      background: #3d4f66;
+      background: #366033;
       padding: 0 32px;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease, padding 0.3s ease;
     }
+
+    .share-expand.active {
+  max-height: 64px;
+  padding: 16px 32px;
+}
 
     article.is-sharing .share-expand {
       max-height: 64px;
@@ -131,17 +135,14 @@
     }
 
     .share-expand h3 {
-      font-size: 0.65rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: #9daec2;
+      font-size: 1rem;
+      color: #f3f8ff;
       white-space: nowrap;
     }
 
     .share-expand button {
       background: none;
-      border: none;
+      border: 1px solid rgb(0, 43, 9);
       color: #ffffff;
       font-size: 0.8rem;
       font-weight: 600;
@@ -203,6 +204,10 @@
         grid-row: 2;
         padding: 0 40px 28px;
       }
+
+        .user-profile {
+    padding: 0;
+  }
 
       .sharing {
         position: absolute;
