@@ -1,0 +1,225 @@
+   *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e8edf5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    article {
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      max-width: 375px;
+    }
+
+    .hero {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .article-content {
+      padding: 36px 32px 0;
+    }
+
+    .article-content h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #2d3f5e;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+
+    .article-content .description {
+      font-size: 0.8rem;
+      color: #9daec2;
+      line-height: 1.7;
+    }
+
+    .supplement {
+      position: relative;
+    }
+
+    .user-profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 32px 28px;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .user-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #2d3f5e;
+    }
+
+    .date {
+      font-size: 0.75rem;
+      color: #9daec2;
+      margin-top: 2px;
+    }
+
+    .sharing {
+      position: absolute;
+      top: 16px;
+      right: 32px;
+    }
+
+    .share {
+      background: #ecf0f6;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #6e8098;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .share:hover {
+      background: #d0d8e8;
+    }
+
+    article.is-sharing .share {
+      background: #6e8098;
+      color: #ffffff;
+    }
+
+    .share-expand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #3d4f66;
+      padding: 0 32px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    article.is-sharing .share-expand {
+      max-height: 64px;
+      padding: 16px 32px;
+    }
+
+    .share-expand h3 {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #9daec2;
+      white-space: nowrap;
+    }
+
+    .share-expand button {
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+
+    .share-expand button:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    @media (min-width: 600px) and (max-width: 1023px) {
+      article {
+        max-width: 540px;
+      }
+
+      .article-content .hero {
+        height: 250px;
+      }
+
+      .article-content h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      article {
+        max-width: 740px;
+        display: grid;
+        grid-template-columns: 42% 1fr;
+        grid-template-rows: 1fr auto auto;
+      }
+
+      .hero {
+        grid-column: 1;
+        grid-row: 1 / 4;
+        height: 100%;
+        min-height: 280px;
+      }
+
+      .article-content {
+        grid-column: 2;
+        grid-row: 1;
+        padding: 36px 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .article-content h2 {
+        font-size: 1.3rem;
+      }
+
+      .supplement {
+        grid-column: 2;
+        grid-row: 2;
+        padding: 0 40px 28px;
+      }
+
+      .sharing {
+        position: absolute;
+        top: auto;
+        bottom: 28px;
+        right: 40px;
+      }
+
+      .share-expand {
+        grid-column: 2;
+        grid-row: 3;
+        border-radius: 0 0 16px 0;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      article.is-sharing .share-expand {
+        padding: 16px 40px;
+      }
+    }
